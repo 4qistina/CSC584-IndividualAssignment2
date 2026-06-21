@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fdf0f4;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2.5rem 1rem;
+    color: #99355a;
+}
+
+/* ── Card wrapper ── */
+.resume-wrap {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #f4c0d1;
+    padding: 2.5rem 2.25rem;
+    width: 100%;
+    max-width: 680px;
+    box-shadow: 0 4px 32px rgba(212, 83, 126, 0.08);
+}
+
+/* ── Header ── */
+.form-header {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+
+.form-header h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #99355A;
+    letter-spacing: -0.3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form-header h1::before {
+    font-family: 'tabler-icons';
+    content: '\ebb8';
+    font-size: 1.5rem;
+    color: #d4537e;
+}
+
+.form-header p {
+    font-size: 0.9rem;
+    color: #b07090;
+    margin-top: 0.35rem;
+}
+
+.divider {
+    height: 3px;
+    width: 60px;
+    background: linear-gradient(90deg, #ed93b1, #f4c0d1);
+    border-radius: 99px;
+    margin: 1rem auto 0;
+}
+
+/* ── Edit banner ── */
+.edit-banner {
+    background: #fbeaf0;
+    border: 1px solid #f4c0d1;
+    border-radius: 10px;
+    padding: 0.65rem 1rem;
+    font-size: 0.88rem;
+    color: #72243e;
+    margin-bottom: 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.edit-banner::before {
+    font-family: 'tabler-icons';
+    content: '\ea72';
+    font-size: 1rem;
+    color: #d4537e;
+    flex-shrink: 0;
+}
+
+/* ── Two-column grid ── */
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 520px) {
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Field group ── */
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-bottom: 1rem;
+}
+
+.field-group label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #99355a;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Label icons via data attribute */
+.field-group[data-icon] label::before {
+    font-family: 'tabler-icons';
+    content: attr(data-icon);
+    font-size: 1rem;
+    color: #d4537e;
+}
+
+/* ── Inputs & Textarea ── */
+.field-group input[type="text"],
+.field-group input[type="email"],
+.field-group textarea {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    color: #99355a;
+    background: #fdf6f8;
+    border: 1.5px solid #f4c0d1;
+    border-radius: 10px;
+    padding: 0.65rem 0.9rem;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+    width: 100%;
+}
+
+.field-group input[type="text"]:focus,
+.field-group input[type="email"]:focus,
+.field-group textarea:focus {
+    border-color: #d4537e;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(212, 83, 126, 0.12);
+}
+
+.field-group input[readonly] {
+    background: #f9edf2;
+    color: #b07090;
+    cursor: not-allowed;
+    border-color: #f4c0d1;
+}
+
+.field-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+/* ── Char counter ── */
+.char-count {
+    font-size: 0.78rem;
+    color: #b07090;
+    text-align: right;
+    margin-top: 0.25rem;
+}
+
+/* ── Section divider ── */
+.section-divider {
+    border: none;
+    border-top: 1px dashed #f4c0d1;
+    margin: 1.25rem 0;
+}
+
+/* ── Submit button ── */
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    background: #d4537e;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    letter-spacing: 0.2px;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.submit-btn::before {
+    font-family: 'tabler-icons';
+    content: '\ea5e';
+    font-size: 1.1rem;
+}
+
+.submit-btn:hover {
+    background: #c03e6a;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* ── Back link ── */
+a {
+    color: #d4537e;
+    font-size: 0.88rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s;
+}
+
+a::before {
+    font-family: 'tabler-icons';
+    content: '\ea60';
+    font-size: 1rem;
+}
+
+a:hover {
+    color: #99355a;
+    text-decoration: underline;
+}

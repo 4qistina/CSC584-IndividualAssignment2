@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fdf0f4;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2.5rem 1rem;
+    color: #99355a;
+}
+
+/* ── Card ── */
+.container {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #f4c0d1;
+    padding: 2.5rem 2.25rem;
+    width: 100%;
+    max-width: 680px;
+    box-shadow: 0 4px 32px rgba(212, 83, 126, 0.08);
+}
+
+/* ── Page title ── */
+h1 {
+    display: none;
+}
+
+/* ── Profile header ── */
+.profile-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #fbeaf0;
+    border: 2px solid #f4c0d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    color: #d4537e;
+}
+
+.profile-header h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #99355a;
+    letter-spacing: -0.2px;
+}
+
+.profile-header p {
+    font-size: 0.875rem;
+    color: #b07090;
+    margin-top: 0.25rem;
+}
+
+.divider {
+    height: 3px;
+    width: 60px;
+    background: #ed93b1;
+    border-radius: 99px;
+    margin: 1rem auto 0;
+}
+
+/* ── Info boxes ── */
+.info-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+    background: #fdf6f8;
+    border: 1px solid #f4c0d1;
+    margin-bottom: 0.75rem;
+    transition: background 0.2s;
+}
+
+.info-box:hover {
+    background: #fbeaf0;
+}
+
+.info-icon {
+    font-size: 1.15rem;
+    color: #d4537e;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+}
+
+.label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: #b07090;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.value {
+    font-size: 0.92rem;
+    color: #99355a;
+    font-weight: 400;
+    word-break: break-word;
+    line-height: 1.5;
+}
+
+/* ── Section divider ── */
+.section-divider {
+    border: none;
+    border-top: 1px dashed #f4c0d1;
+    margin: 1.25rem 0;
+}
+
+/* ── Action buttons ── */
+.actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.actions a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 0.72rem 1rem;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.actions a.btn-primary {
+    background: #d4537e;
+    color: #ffffff;
+    border: 1.5px solid #d4537e;
+}
+
+.actions a.btn-primary:hover {
+    background: #c03e6a;
+    border-color: #c03e6a;
+}
+
+.actions a.btn-outline {
+    background: #fdf6f8;
+    color: #99355a;
+    border: 1.5px solid #f4c0d1;
+}
+
+.actions a.btn-outline:hover {
+    background: #fbeaf0;
+    border-color: #d4537e;
+}
+
+.actions a:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 420px) {
+    .actions {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fdf0f4;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2.5rem 1rem;
+    color: #99355a;
+}
+
+/* ── Card ── */
+.resume-wrap {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #f4c0d1;
+    padding: 2.5rem 2.25rem;
+    width: 100%;
+    max-width: 680px;
+    box-shadow: 0 4px 32px rgba(212, 83, 126, 0.08);
+}
+
+/* ── Header ── */
+.form-header {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+
+.form-header h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #99355a;
+    letter-spacing: -0.3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form-header h1 i {
+    font-size: 1.5rem;
+    color: #d4537e;
+}
+
+.form-header p {
+    font-size: 0.9rem;
+    color: #b07090;
+    margin-top: 0.4rem;
+}
+
+.divider {
+    height: 3px;
+    width: 60px;
+    background: #ed93b1;
+    border-radius: 99px;
+    margin: 1rem auto 0;
+}
+
+/* ── Two-column grid ── */
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+@media (max-width: 520px) {
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Field group ── */
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-bottom: 1rem;
+}
+
+.field-group label {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #99355a;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.field-group label i {
+    font-size: 1rem;
+    color: #d4537e;
+}
+
+/* ── Inputs & Textarea ── */
+.field-group input[type="text"],
+.field-group input[type="email"],
+.field-group textarea {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    color: #99355a;
+    background: #fdf6f8;
+    border: 1.5px solid #f4c0d1;
+    border-radius: 10px;
+    padding: 0.65rem 0.9rem;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.field-group input[type="text"]:focus,
+.field-group input[type="email"]:focus,
+.field-group textarea:focus {
+    border-color: #d4537e;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(212, 83, 126, 0.12);
+}
+
+.field-group input::placeholder,
+.field-group textarea::placeholder {
+    color: #d4a0b5;
+}
+
+.field-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+/* ── Section divider ── */
+.section-divider {
+    border: none;
+    border-top: 1px dashed #f4c0d1;
+    margin: 0.5rem 0 1.25rem;
+}
+
+/* ── Submit button ── */
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    background: #d4537e;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 1.25rem;
+    letter-spacing: 0.2px;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.submit-btn i {
+    font-size: 1.1rem;
+}
+
+.submit-btn:hover {
+    background: #c03e6a;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
