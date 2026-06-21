@@ -9,7 +9,7 @@ A – Search Profile
 Search profiles using:
 - Student ID
 - Name
-- 
+  
 B – Edit Profile
 Allow users to update profile information.
 
